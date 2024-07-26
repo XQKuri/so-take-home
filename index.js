@@ -11,14 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
         sidebar.classList.remove('show');
     });
     
-   window.addEventListener('load', () => {
-            const audio = document.getElementById('background-audio');
-            // Try to play the audio
-            audio.play().catch(error => {
-                // Handle errors (e.g., autoplay blocked)
-                console.error('Audio play error:', error);
-            });
-       
+    var audio = document.getElementById('background-audio');
+    if (audio) {
+        audio.play().catch(function(error) {
+            console.log('Audio playback was prevented:', error);
+        });
+    }
+
     const iconItems = document.querySelectorAll('.icon-item');
 
     iconItems.forEach(item => {
