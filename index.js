@@ -11,12 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
         sidebar.classList.remove('show');
     });
     
-    var audio = document.getElementById('background-audio');
-    if (audio) {
-        audio.play().catch(function(error) {
-            console.log('Audio playback was prevented:', error);
-        });
-    }
+   window.addEventListener('load', () => {
+            const audio = document.getElementById('background-audio');
+            // Try to play the audio
+            audio.play().catch(error => {
+                // Handle errors (e.g., autoplay blocked)
+                console.error('Audio play error:', error);
 
     const iconItems = document.querySelectorAll('.icon-item');
 
