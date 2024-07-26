@@ -11,11 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
         sidebar.classList.remove('show');
     });
     
+    window.addEventListener('load', function() {
     var audio = document.getElementById('background-audio');
-    if (audio) {
-        audio.play().catch(function(error) {
-            console.log('Audio playback was prevented:', error);
-        });
+    audio.play();
+    });
     }
 
     const iconItems = document.querySelectorAll('.icon-item');
