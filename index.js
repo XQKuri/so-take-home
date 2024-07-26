@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
             audio.play().catch(error => {
                 // Handle errors (e.g., autoplay blocked)
                 console.error('Audio play error:', error);
-
+            });
+       
     const iconItems = document.querySelectorAll('.icon-item');
 
     iconItems.forEach(item => {
